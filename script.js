@@ -55,7 +55,7 @@ let perguntaAtual;
 let historiaFinal = "";
 function mostraPerguntas() {
     if(atual >= perguntas.lenght){
-        
+        historiaFinal += afirmação + " ";
         return;
     }
 
