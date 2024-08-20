@@ -50,11 +50,11 @@ const alternativa  = [
     },
 ]
 
-let atual = 0
+let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 function mostraPerguntas() {
-    if(atual >= perguntas.lenght){
+    if(atual >= perguntas.length){
         historiaFinal += afirmação + " ";
         return;
     }
@@ -72,10 +72,10 @@ function mostraAlternativas (){
     }
 }
 
-function respoataSelecionada(perguntas){
-
+function respostaSelecionada(perguntas){
+    const afirmação = pergunta.afirmação;
+    historiaFinal += afirmação +" ";
     atual++;
-    mostraPerguntas;
     mostraPerguntas();
 }
 
