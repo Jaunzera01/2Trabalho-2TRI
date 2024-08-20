@@ -73,6 +73,6 @@ function mostraAlternativas (){
 function respoataSelecionada(pergunta){
 
     atual++;
-    mostraPergunta;
+    mostraPergunta ();
 }
 mostraPerguntas();
