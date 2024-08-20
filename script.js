@@ -64,10 +64,13 @@ function mostraPerguntas() {
     caixaAlternativas.textContent= "";
     mostraAlternativas();
 }
+
+
 function mostraAlternativas (){
     for( const Alternativa of  perguntaAtual.alternativas){ 
         const botaoAlternativa=document.createElement( "button");
         botaoAlternativa.textContent=Alternativa.texto;
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(pergunta));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
