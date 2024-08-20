@@ -62,30 +62,17 @@ function mostraAlternativas (){
     for( const Alternativa of  perguntaAtual.alternativas){ 
         const botaoAlternativa=document.createElement( "button");
         botaoAlternativa.textContent=Alternativa.texto;
-<<<<<<< HEAD
         botaoAlternativa.addEventListener("click", () => respoataSelecionada(perguntas)){
             atual++;
             mostraPerguntas();
         })
-=======
-        botaoAlternativa.addEventListener("click", () => respoataSelecionada(Alternativa ));       
->>>>>>> c7fdcd2a01a9377fd5799f23867fee035429f00f
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
-<<<<<<< HEAD
 
 function respoataSelecionada(perguntas){
 
     atual++;
     mostraPerguntas
 }
-=======
-
-function respoataSelecionada(Alternativa ){
-    const afimacoes = Alternativa.afirmacao;
-    atual++;
-    mostraPergunta ();
-}
->>>>>>> c7fdcd2a01a9377fd5799f23867fee035429f00f
 mostraPerguntas();
