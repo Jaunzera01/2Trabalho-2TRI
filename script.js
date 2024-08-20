@@ -76,5 +76,5 @@ function respoataSelecionada(perguntas){
 
     atual++;
     mostraPerguntas;
+    mostraPerguntas();
 }
-mostraPerguntas();
