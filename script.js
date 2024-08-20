@@ -4,7 +4,7 @@ const caixaAlternativas = document.querySelector('.caixa-alternativas');
 const caixaResultado = document.querySelector('.caixa-resultado');
 const textoResultado = document.querySelector('.caixa-resultado');
 
-const perguntas = [
+const alternativa  = [
     {
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
@@ -62,7 +62,7 @@ function mostraAlternativas (){
     for( const Alternativa of  perguntaAtual.alternativas){ 
         const botaoAlternativa=document.createElement( "button");
         botaoAlternativa.textContent=Alternativa.texto;
-        botaoAlternativa.addEventListener("click", () => respoataSelecionada(Alternativa ));
+        botaoAlternativa.addEventListener("click", () => respoataSelecionada(Alternativa ));       
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
