@@ -9,11 +9,11 @@ const perguntas = [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto: "Acabar com a pobreza, porém não será um país de primeiro mundo.",
+                texto: "Você realiza todos os sonhos da sua vida, porém serão realizados longe de seus amados e eles não poderão saber que foram realizados.",
                 afirmação: "afirmação",
             },
             {
-                texto: "Descobrir a cura do câncer e HIV, mas uma nova doença surgirá.",
+                texto: "Você prefere encontrar a cura para o câncer, porém você tem que escolher uma doença de um familiar seu para nunca ser curada.",
                 afirmação: "afirmação",
 
             },
@@ -23,11 +23,11 @@ const perguntas = [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-                texto: "Trazer uma espécie extinta, porém outra terá que ser extinta no lugar. ",
+                texto: "Você prefere despolui todos os mares e rios, porém terá que escolher uma espécie animal para desaparecer. ",
                 afirmação: "afirmação",
             },
             {
-                texto: "Salvar o meio ambiente mas perder alguém da sua família.",
+                texto: "Você prefere melhorar toda a infraestrutura da África, mas a má infraestrutura seria distribuída para outros países de acordo com o seu nível de desenvolvimento.",
                 afirmação: "afirmação",
 
             },
@@ -38,11 +38,11 @@ const perguntas = [
         alternativas: [
 
             {
-                texto: "Criar uma nova tecnologia, porém não será reconhecido.",
+                texto: "Você acabaria com a Deepweb mesmo sabendo que a pessoa que acabou com ela usará toda a informação a favor dela.",
                 afirmação: "afirmação",
             },
             {
-                texto: "Viver com a mesma tecnologia para sempre.",
+                texto: "Você prefere expor todos os segredos das maiores empresas do mundo, mas a sociedade entraria em colapso.",
                 afirmação: "afirmação",
 
             },
@@ -62,11 +62,17 @@ function mostraAlternativas (){
     for( const Alternativa of  perguntaAtual.alternativas){ 
         const botaoAlternativa=document.createElement( "button");
         botaoAlternativa.textContent=Alternativa.texto;
-        botaoAlternativa.addEventListener("click", function() {
+        botaoAlternativa.addEventListener("click", () => respoataSelecionada(perguntas)){
             atual++;
             mostraPerguntas();
         })
         caixaAlternativas.appendChild(botaoAlternativa);
     }
+}
+
+function respoataSelecionada(perguntas){
+
+    atual++;
+    mostraPerguntas
 }
 mostraPerguntas();
