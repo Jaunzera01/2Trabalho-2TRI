@@ -34,7 +34,7 @@ const alternativa  = [
         alternativas: [
             {
 <<<<<<< HEAD
-                texto: "Você prefere despolui todos os mares e rios, porém terá que escolher uma espécie animal para desaparecer. ",
+                texto: "Você prefere despoluir todos os mares e rios, porém terá que escolher uma espécie animal para desaparecer. ",
                 afirmação: "afirmação",
 =======
                 texto: "Você prefere despolui todos os mares e rios, porém terá que escolher uma espécie animal para desaparecer. ",
