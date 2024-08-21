@@ -88,4 +88,4 @@ function mostrarResultado(){
     caixaAlternativas.textContent = " ";
 }
 
-mostrarPerguntas();
+mostraPerguntas();
