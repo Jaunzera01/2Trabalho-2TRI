@@ -82,7 +82,7 @@ function respostaSelecionada(perguntas){
     mostraPerguntas();
 }
 
-function mostrarResultado(){
+function mostraResultado(){
     caixaPerguntas.textContent = "Em resumo, você escolheu...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = " ";
