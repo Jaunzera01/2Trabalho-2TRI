@@ -2,9 +2,9 @@ const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPerguntas = document.querySelector('.caixa-perguntas');
 const caixaAlternativas = document.querySelector('.caixa-alternativas');
 const caixaResultado = document.querySelector('.caixa-resultado');
-const textoResultado = document.querySelector('.texto-resultado');
+const textoResultado = document.querySelector('.caixa-resultado');
 
-const alternativa  = [
+const perguntas = [
     {
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
@@ -44,46 +44,42 @@ const alternativa  = [
             {
                 texto: "Você prefere expor todos os segredos das maiores empresas do mundo, mas a sociedade entraria em colapso.",
                 afirmação: "afirmação",
-
             },
         ]
     },
 ]
 
-let atual = 0;
+let atual = 0
 let perguntaAtual;
-let historiaFinal = "";
+ let historiaFinal = "";
 function mostraPerguntas() {
-    if(atual >= perguntas.length){
-        historiaFinal += afirmação + " ";
+    if (atual >= perguntas.length) {
+        mostraResultado();
         return;
     }
-
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent= "";
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
-
-
-function mostraAlternativas (){
-    for( const Alternativa of perguntaAtual.alternativas){ 
-        const botaoAlternativa=document.createElement( "button");
-        botaoAlternativa.textContent=Alternativa.texto;
+function mostraAlternativas() {
+    for (const pergunta of perguntaAtual.alternativas) {
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = pergunta.texto;
         botaoAlternativa.addEventListener("click", () => respostaSelecionada(pergunta));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 
-function respostaSelecionada(perguntas){
-    const afirmação = pergunta.afirmação;
-    historiaFinal += afirmação +" ";
+function respostaSelecionada(pergunta) {
+    const afirmacoes = pergunta.afirmação;
+    historiaFinal += afirmacoes +" ";
     atual++;
     mostraPerguntas();
 }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "Em resumo, você escolheu...";
+    caixaPerguntas.textContent = "";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = " ";
 }
